@@ -13,7 +13,7 @@
 			overflow-x:hidden;
         }
 
-        header {
+         header {
             display: flex;
 			 flex-direction: row; 
             justify-content: space-between;
@@ -47,6 +47,8 @@
             padding: 8px 15px;
             border-radius: 30px;
             transition: background-color 0.3s;
+			font-size:100%;
+			
         }
 
         nav a:hover {
@@ -68,7 +70,24 @@
             font-weight: bold;
 			display:block;
 			margin-right:2%;
+			font-size:100%;
         }
+		.intro1{
+			color:#B15327; 
+			text-align:left;
+			border:solid #B15327;
+			border-radius:15px;
+			width:61vh;
+			font-size:100%;
+		}
+		.intro2{
+			text-align:left;
+			font-size:200%;
+		}
+		.intro3{
+			color:black;
+			text-align:left;
+			}
 		.btn-book-appointmentt {
             background-color: #B15327;
             color: #fff;
@@ -79,7 +98,7 @@
             font-weight: bold;
 			display:block;
 			margin-right:2%;
-			width:47%;
+			width:47vh;
         }
 		.about-read-more{
 			background-color: #B15327;
@@ -91,6 +110,9 @@
             font-weight: bold;
 			display:block;
 			margin-left:0%;
+			width:20vh;
+			text-align:center;
+			font-size:90%;
 		}
 		
 		.btn-services{
@@ -199,6 +221,180 @@
 			margin-left:45%;
 			text-align:left;
 		}
+		@media (max-width: 1310px) { 
+			header {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        header img {
+            height: 100px; /* Adjust the height of your logo */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:54%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+		.btn-book-appointment {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			font-size:54%;
+        }
+		.intro1{
+			color:#B15327; 
+			text-align:left;
+			border:solid #B15327;
+			border-radius:15px;
+			width:61vh;
+		}
+		.intro2{
+			text-align:left;
+		}
+		.intro3{
+			color:black;
+			text-align:left;
+			}
+			.btn-book-appointmentt {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			width:47vh;
+        }
+		}
+		@media (max-width: 1000px) { 
+			header {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        header img {
+            height: 100px; /* Adjust the height of your logo */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:54%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+		.btn-book-appointment {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			font-size:54%;
+        }
+		.intro1{
+			color:#B15327; 
+			text-align:left;
+			border:solid #B15327;
+			border-radius:15px;
+			width:61vh;
+		}
+		.intro2{
+			text-align:left;
+			font-size:150%;
+		}
+		.intro3{
+			color:black;
+			text-align:left;
+			}
+			
+		.btn-book-appointmentt {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			width:37vh !important;
+        }
+		}
         @media (max-width: 768px) {
             header {
          flex-direction: column; 
@@ -249,6 +445,22 @@
 	.btn-book-appointment{
 		display:none;
 	}
+	.intro1{
+			color:#B15327; 
+			text-align:left;
+			border:solid #B15327;
+			border-radius:15px;
+			width:56vh;
+			font-size:80%;
+		}
+		.intro2{
+			text-align:left;
+			font-size:130%;
+		}
+		.intro3{
+			color:black;
+			text-align:left;
+			}
 	.btn-book-appointmentt {
             background-color: #B15327;
             color: #fff;
@@ -618,7 +830,7 @@
             <a href="services.html">Services</a>
             <a href="appointment.html">Appointment</a>
             <a href="index.html">Message</a>
-            <a href="about.html" class="active">About Us</a>
+            <a href="about.html" class="active">About_Us</a>
             <a href="contact.html">Contact</a>
         </nav>
         <a href = "appointment.html"class="btn btn-book-appointment">Book an Appointment</a>
@@ -628,9 +840,9 @@
 		
             <div class="row" style="margin-top:4%;">
                 <div class="col-md-6 column text-left" style="margin-top:12%;">
-                   <p style="color:#B15327; text-align:left;">Empowering Natural Health, Transforming Healthy Lives</p>
-                <h1 style="text-align:left;"><span style="color:black; font-weight:bold;">Welcome To </span> <span style="color:#449A5C; font-weight:bold;">Pakistan </span> <span style="color:#449A5C; font-weight:bold;">Clinic</span> <span style="color:#449A5C; font-weight:bold;"> Of </span> <span style="color:#B15327;font-weight:bold;" >Eastern Medicine</h1>
-                <p style="color:black; text-align:left;">The Center of <span style="color:#449A5C;">100%</span> Natural Care</p>
+                    <p class = "intro1">&nbsp&nbspEnabling Natural Health, Rebuilding Healthy Lives</p>
+                <h1 class = "intro2"><span style="color:black; font-weight:bold;">Welcome To </span> <span style="color:#449A5C; font-weight:bold;">Pakistan </span> <span style="color:#449A5C; font-weight:bold;">Clinic</span> <span style="color:#449A5C; font-weight:bold;"> Of </span> <span style="color:#B15327;font-weight:bold;" >Eastern Medicine</h1>
+                <p class = "intro3">The Center of <span style="color:#449A5C;">100%</span> Natural Care</p>
                 <a href = "appointment.html"style="margin-left:0%"; class="btn btn-book-appointmentt">Book an Appointment</a>
                 </div>
                 <div class="col-md-6 columnn mask" >
@@ -661,7 +873,7 @@
 	<br>
 	<br>
 	<br>
-        <div class="roww">
+        <div class="row">
             <div class="column2">
 				<h1 class = "mbt-info"><span style="color:#449A5C; font-size:0.8em;">Why Choose Us </span></h1>
 			
@@ -670,9 +882,10 @@
                 
             </div>
             <div class="mbt-img">
-                <img class = "mask-2" src="choose.png" alt="mask" height=60%;>
+                <img class = "mask-2" src="choose.png" alt="mask" height=50%;>
 			</div>
         </div>
+		
     </div>
 	<div class="section3" style="background-color:#f8fcf4;">
     <div class="container mt-5" style="background-color:#f8fcf4; ">

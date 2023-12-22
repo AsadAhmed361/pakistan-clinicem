@@ -124,6 +124,66 @@
     .carousel-control-next:hover {
       background-color: rgba(255, 255, 255, 0.8);
     }
+	@media (max-width: 1310px) { 
+			header {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        header img {
+            height: 100px; /* Adjust the height of your logo */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:54%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+		.btn-book-appointment {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			font-size:54%;
+        }
+		}
         @media (max-width: 768px) {
             header {
          flex-direction: column; 
