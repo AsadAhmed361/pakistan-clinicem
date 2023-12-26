@@ -510,7 +510,7 @@
     <!-- Second Heading with Colors -->
     <h1 style="font-weight:bold;"> Get In Touch With US</h1>
 	<p style="text-align:center;">Connect with us today. Your questions, our commitment to assist.</p>
-	<form>
+	<form name="submit-to-google-sheet">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label style = "font-weight:bold;" for="firstName">First Name</label>
@@ -540,7 +540,17 @@
             
             <button type="submit" class="btn btn-book">Submit</button>
         </form>
-   
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzwDzYI2fpwReEWXc8WMvDoul9tvWNghlA0oEN3jA-nijkdv1jN2l8Zb4at9tJlX1FQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 	</div>
 	
 	 <footer class="footer">
@@ -586,7 +596,7 @@
 		<p class="copyright">(www.pakistanclinicem.com) All Rights Reserved.</p>
 		</div>
 	</footer>
-
+	
 	<script>
         var header = document.getElementById("header");
         var nav = document.querySelector("nav");
