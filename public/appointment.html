@@ -510,31 +510,31 @@
     <!-- Second Heading with Colors -->
     <h1 style="font-weight:bold;">Book an Appointment</h1>
 	<p style="text-align:center;">Take the first step towards a healthier you. Schedule your appointment now.</p>
-	<form>
+	<form name = "submit-to-google-sheet">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label style = "font-weight:bold;" for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Enter First Name">
                 </div>
                 <div class="form-group col-md-6">
                     <label style = "font-weight:bold;" for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter Last Name">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label style = "font-weight:bold;" for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
                 </div>
                 <div class="form-group col-md-6">
                     <label style = "font-weight:bold;" for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Your Phone">
                 </div>
             </div>
 			<div class="form-row">
             <div class="form-group col-md-6">
                 <label style = "font-weight:bold;"for="services">Services</label>
-                <select class="form-control" id="services">
+                <select class="form-control" name="services" id="services">
                     <!-- Add your service options here -->
                     <option>OPD of Eastern Medicine</option>
                     <option>Natural Oil Massage Cupping</option>
@@ -552,25 +552,37 @@
             </div>
 			<div class="form-group col-md-6">
                 <label style = "font-weight:bold;" for="date">Date</label>
-                <input type="date" class="form-control" id="date" value="<?php echo date('Y-m-d'); ?>">
+                <input type="date" class="form-control" name="date" id="date" value="<?php echo date('Y-m-d'); ?>">
             </div>
 			</div>
             <div class="form-group">
                 <label style = "font-weight:bold;" for="patientInfo">Write us the age, gender & chief medical complaints of your patient?</label>
-                <textarea class="form-control" id="patientInfo" rows="1" placeholder="Your answer"></textarea>
+                <textarea class="form-control" name="patientInfo" id="patientInfo" rows="1" placeholder="Your answer"></textarea>
             </div>
             <div class="form-group">
                 <label style = "font-weight:bold;" for="complaintsHistory">Give us the history about these complaints (when & how they happened)?</label>
-                <textarea class="form-control" id="complaintsHistory" rows="1" placeholder="Your answer"></textarea>
+                <textarea class="form-control" name="complaintsHistory" id="complaintsHistory" rows="1" placeholder="Your answer"></textarea>
             </div>
             <div class="form-group">
                 <label style = "font-weight:bold;" for="medicalHistory">Any significant past medical illness & medication?</label>
-                <textarea class="form-control" id="medicalHistory" rows="1" placeholder="Your answer"></textarea>
+                <textarea class="form-control" name="medicalHistory" id="medicalHistory" rows="1" placeholder="Your answer"></textarea>
             </div>
             
             <button type="submit" class="btn btn-book">Submit</button>
         </form>
-   
+   	<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxNUTE_3pRmWanNKMK-5UAWdTyCo6iqEvmWqJElWEnGHxYIkzrDxzQMTKSivJiQLwCG/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+	      alert("Form has been submitted, we will get back soon!")
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 	</div>
 	
 	 <footer class="footer">
