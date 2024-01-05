@@ -13,7 +13,8 @@
 			overflow-x:hidden;
         }
 
-        header {
+       header {
+		
             display: flex;
 			 flex-direction: row; 
             justify-content: space-between;
@@ -24,6 +25,7 @@
             width: 100%;
             z-index: 1000;
             transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			
         }
 
         header.scrolled {
@@ -31,12 +33,82 @@
         }
 
         header img {
+            height: 123px; /* Adjust the height of your logo */
+        }
+
+        .firstnav {
+            display: flex;
+            align-items: center;
+			opacity:0;
+        }
+
+        .firstnav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:74%;
+			pointer-events: none;
+			
+        }
+
+        firstnav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		firstnav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+
+        .btn-book-appointment {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			font-size:100%;
+			opacity:0;
+			pointer-events: none;
+        }
+		
+		.head {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:103px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
             height: 63px; /* Adjust the height of your logo */
+			
         }
 
         nav {
             display: flex;
             align-items: center;
+			opacity:1
+			pointer-events: auto;
         }
 
         nav a {
@@ -47,7 +119,7 @@
             padding: 8px 15px;
             border-radius: 30px;
             transition: background-color 0.3s;
-			font-size:62%;
+			font-size:100%;
 			
         }
 
@@ -60,7 +132,7 @@
             color: #fff;
         }
 
-        .btn-book-appointment {
+        .btn-book-appointment-head {
             background-color: #B15327;
             color: #fff;
             padding: 10px 20px;
@@ -1739,18 +1811,32 @@ body {
 
      <header id="header">
         <img src="logo.png" alt="Logo">
-        <button class="btn burger-btn btn-success" onclick="toggleNav()">&#9776;</button>
-        <nav>
+        <button class="btn btn-success burger-btn" onclick="toggleNav()">&#9776;</button>
+        <nav class = "firstnav">
             <a href="index.html">Home</a>
             <a href="overview.html" class="active">Overview</a>
             <a href="services.html">Services</a>
             <a href="appointment.html">Appointment</a>
             <a href="index.html">Message</a>
-            <a href="about.html">About&nbspUs</a>
+            <a href="about.html">About&nbsp;Us</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <a href = "appointment.html" class="btn btn-book-appointment">Book an Appointment</a>
+        <a href="appointment.html" class="btn btn-book-appointment">Book an Appointment</a>
     </header>
+	<div id="head" class = "head">
+        
+        <nav class="2ndnav">
+            <a href="index.html" >Home</a>
+            <a href="overview.html"class="active">Overview</a>
+            <a href="services.html">Services</a>
+            <a href="appointment.html">Appointment</a>
+            <a href="index.html">Message</a>
+            <a href="about.html">About&nbsp;Us</a>
+            <a href="contact.html">Contact</a>
+	    <a style = "background-color:#B15327; border:solid #B15327; color:#ffffff;" href="appointment.html">Book an Appointment</a>
+        </nav>
+        
+    </div>
    
 	
 	
