@@ -14,6 +14,7 @@
         }
 
          header {
+		
             display: flex;
 			 flex-direction: row; 
             justify-content: space-between;
@@ -24,6 +25,7 @@
             width: 100%;
             z-index: 1000;
             transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			
         }
 
         header.scrolled {
@@ -31,15 +33,16 @@
         }
 
         header img {
-            height: 63px; /* Adjust the height of your logo */
+            height: 123px; /* Adjust the height of your logo */
         }
 
-        nav {
+        .firstnav {
             display: flex;
             align-items: center;
+			opacity:0;
         }
 
-        nav a {
+        .firstnav a {
             color: #449A5C;
             margin: 0 15px;
             text-decoration: none;
@@ -47,15 +50,16 @@
             padding: 8px 15px;
             border-radius: 30px;
             transition: background-color 0.3s;
-			font-size:62%;
+			font-size:74%;
+			pointer-events: none;
 			
         }
 
-        nav a:hover {
+        firstnav a:hover {
             background-color: #449A5C; /* Green color on hover */
             color: #fff;
         }
-		nav a.active {
+		firstnav a.active {
             background-color: #449A5C;
             color: #fff;
         }
@@ -71,8 +75,75 @@
 			display:block;
 			margin-right:2%;
 			font-size:100%;
+			opacity:0;
+			pointer-events: none;
         }
 		
+		.head {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:103px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+
+        .btn-book-appointment-head {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			font-size:100%;
+        }
 		
 		
 
@@ -127,66 +198,7 @@
     .carousel-control-next:hover {
       background-color: rgba(255, 255, 255, 0.8);
     }
-	@media (max-width: 1310px) { 
-			header {
-            display: flex;
-			 flex-direction: row; 
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
-            
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            transition: background-color 0.3s ease; /* Add a smooth transition effect */
-        }
-
-        header.scrolled {
-            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
-        }
-
-        header img {
-            height: 100px; /* Adjust the height of your logo */
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav a {
-            color: #449A5C;
-            margin: 0 15px;
-            text-decoration: none;
-            border: 2px solid #449A5C; /* Green border */
-            padding: 8px 15px;
-            border-radius: 30px;
-            transition: background-color 0.3s;
-			font-size:54%;
-			
-        }
-
-        nav a:hover {
-            background-color: #449A5C; /* Green color on hover */
-            color: #fff;
-        }
-		nav a.active {
-            background-color: #449A5C;
-            color: #fff;
-        }
-		.btn-book-appointment {
-            background-color: #B15327;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 31px;
-            cursor: pointer;
-            font-weight: bold;
-			display:block;
-			margin-right:2%;
-			font-size:54%;
-        }
-		}
+	
 	    @media (max-width: 1280px) { 
 			header {
             display: flex;
@@ -206,15 +218,16 @@
         }
 
         header img {
-            height: 54px; /* Adjust the height of your logo */
+            height: 123px; /* Adjust the height of your logo */
         }
 
-        nav {
+        .firstnav {
             display: flex;
             align-items: center;
+			opacity:0;
         }
 
-        nav a {
+        .firstnav a {
             color: #449A5C;
             margin: 0 15px;
             text-decoration: none;
@@ -223,14 +236,15 @@
             border-radius: 30px;
             transition: background-color 0.3s;
 			font-size:54%;
+			pointer-events:none;
 			
         }
 
-        nav a:hover {
+        .firstnav a:hover {
             background-color: #449A5C; /* Green color on hover */
             color: #fff;
         }
-		nav a.active {
+		.firstnav a.active {
             background-color: #449A5C;
             color: #fff;
         }
@@ -245,6 +259,58 @@
 			display:block;
 			margin-right:2%;
 			font-size:54%;
+        }
+		.head {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:101px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
         }
 		}
 	@media (max-width: 1024px) { 
@@ -311,6 +377,124 @@
 			display:block;
 			margin-right:2%;
 			font-size:54%;
+        }
+	}
+	    @media (max-width: 1024px) { 
+			body {
+            margin: 0;
+            padding: 0;
+            font-family: Quicksand;
+			overflow-x:hidden;
+        }
+				header {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        header img {
+            height: 62px; /* Adjust the height of your logo */
+        }
+
+        .firstnav {
+            display: flex;
+            align-items: center;
+        }
+
+        .firstnav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:54%;
+			
+        }
+
+        .firstnav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		.firstnav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+		.btn-book-appointment {
+            background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-right:2%;
+			font-size:54%;
+        }
+		.head {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: Inherit;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 13px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:75%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
         }
 	}
 	@media (max-width: 769px) { 
@@ -380,163 +564,6 @@
         }
 	}
         @media (max-width: 768px) {
-            header {
-         flex-direction: column; 
-		 align-items: flex-start;
-        background-color: rgba(255, 255, 255, 1);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        font-size: 18px; /* Adjust the font size for better readability */
-        color: #333; /* Set a text color that complements the background */
-		width: 100%;
-    }
-.custom-section {
-			margin-top:20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 50vh;
-			
-        }
-           header img {
-                height: 100px;
-				margin-left:0%;
-				margin-bottom:5%;
-            }
-
-            nav {
-				align-items: flex-start;
-                flex-direction: column;
-                text-align: center;
-                background-color: rgba(255, 255, 255, 1);
-                padding: 0px;
-                position: relative;
-                display: none; /* Initially hide the navigation links */
-            }
-
-            nav.show {
-                display: flex; /* Show the navigation links when the class is present */
-				width:100%;
-            }
-
-            nav a {
-        margin: 10px; /* Increase the margin for better spacing */
-        padding: 8px 15px; /* Add padding for better clickability */
-        border-radius: 5px; /* Reduce border radius for a cleaner look */
-        text-decoration: none;
-        color: #555; /* Set a color that complements the background */
-        border: 1px solid #ccc; /* Add a subtle border for separation */
-        transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
-		width:95%;
-    }
-
-    nav a:hover {
-        background-color: #eee; /* Change background color on hover */
-        color: #333; /* Change text color on hover */
-    }
-	.btn-book-appointment{
-		display:none;
-	}
-	.burger-btn{
-		display:block;
-		margin-right:5%;
-		margin-left:85%;
-		margin-top:-22%;
-		margin-bottom:7%;
-		color:black;
-	}
-	
-		
-		
-		.footer {
-            background-color: #f8fcf4;
-            padding: 30px 0;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-			display:block;
-        }
-
-        .clinic-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-			justify-content:flex-start;
-			display:none;
-        }
-
-        .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
-
-        .clinic-info h1 {
-            font-size: 24px;
-			display:none !important;
-        }
-
-        .footer-links {
-            display: none !important;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 0px;
-			padding-left:20%;
-			padding-right:20%;
-			
-        }
-
-        .link-group {
-            width: 30%; /* Adjust width as needed */
-			display:none;
-			}
-
-        .link-group h4 {
-            margin-bottom: 10px;
-			display:none;
-        }
-
-        .link-group ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-			display:none;
-        }
-
-        .link-group a {
-            color: #333;
-            text-decoration: none;
-			display:none;
-        }
-
-        .social-links {
-            display: none;
-            justify-content: space-between;
-            width: 20%;
-			
-        }
-
-        .social-links img {
-            max-width: 25px; 
-			max-height:25px;
-            margin-right: 10px;
-			display:none;
-        }
-
-        .copyright {
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-            margin-top: 20px;
-			display:none;
-        }
-		.last{
-			border:none !important;
-			}
-        }		
-
-
-         @media (max-width: 768px) {
           header {
          flex-direction: column; 
 		 align-items: flex-start;
@@ -546,21 +573,14 @@
         color: #333; /* Set a text color that complements the background */
 		width: 100%;
     }
-.custom-section {
-			margin-top:20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 50vh;
-			
-        }
-          header img {
-                height: 114px;
-				margin-left:0%;
-				margin-bottom:5%;
-            }
 
-            nav {
+           header img {
+    height: 118px;
+    margin-left: 0%;
+    margin-bottom: 3%;
+}
+
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -568,14 +588,15 @@
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -584,15 +605,70 @@
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events:auto;
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	.burger-btn {
     display: block;
     margin-right: 5%;
@@ -711,12 +787,12 @@
     }
 
             header img {
-                height: 70px;
+                height: 59px;
 				margin-left:0%;
 				margin-bottom:5%;
             }
 
-            nav {
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -724,14 +800,15 @@
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1;
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -740,15 +817,70 @@
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events:auto;
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	.burger-btn{
 		display:block;
 		margin-right:5%;
@@ -853,7 +985,7 @@
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-            header {
+             header {
          flex-direction: column; 
 		 align-items: flex-start;
         background-color: rgba(255, 255, 255, 1);
@@ -869,7 +1001,7 @@
 				margin-bottom:5%;
             }
 
-            nav {
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -877,14 +1009,15 @@
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1;
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -893,15 +1026,70 @@
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events:auto;
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 		.burger-btn{
 		display:block;
 		margin-right:5%;
@@ -910,9 +1098,78 @@
 		margin-bottom:7%;
 		color:black;
 	}
-		
-		
-.footer {
+	.main-section img {
+            width: 150%;
+            height: auto;
+			margin-top:400%;
+			
+        }
+		.columnn {
+            flex: 2;
+            padding: 20px;
+			display:none;
+        }
+		.mask{
+		display:none;
+		}
+		.about{
+			text-align:center;
+		}
+		.about-p{
+			color:black;
+			font-size:0.8em; 
+			text-align:center;
+		}
+		.about-read-more{
+			background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-left:35%;
+			width:30%;
+		}
+		.btn-services{
+		background-color: #B15327;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 31px;
+            cursor: pointer;
+            font-weight: bold;
+			display:block;
+			margin-left:25% !important;
+			}
+			.mbt-fonts{
+			font-size:0.8em;
+		}
+		.mbt-info{
+			text-align:center;
+			margin-left:0%;
+		}
+		.mbt-info-ul{
+		text-align:center;
+		margin-left:5%;
+		font-size:0.8em;
+		}
+		.mbt-li{
+			text-align:left;
+		}
+		.mbt-e-p{
+			color:black;
+			font-size:0.8em;
+			margin-left:5%;
+			text-align:center;
+		}
+		.mbt-img {
+            flex: 2;
+            margin-left:15%;
+			width:50%;
+        }
+		.footer {
             background-color: #f8fcf4;
             padding: 30px 0;
             color: #333;
@@ -1007,7 +1264,7 @@ body {
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-            header {
+           header {
          flex-direction: column; 
 		 align-items: flex-start;
         background-color: rgba(255, 255, 255, 1);
@@ -1056,6 +1313,60 @@ body {
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 		.burger-btn{
 		display:block;
 		margin-right:5%;
@@ -1151,6 +1462,7 @@ body {
 			border:none !important;
 			}
         }
+
 		@media (max-width: 430px) {
 body {
             margin: 0;
@@ -1309,7 +1621,7 @@ body {
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-            header {
+             header {
          flex-direction: column; 
 		 align-items: flex-start;
         background-color: rgba(255, 255, 255, 1);
@@ -1320,7 +1632,7 @@ body {
     }
 
             header img {
-                height: 61px;
+                height: 57px;
 				margin-left:0%;
 				margin-bottom:5%;
             }
@@ -1355,9 +1667,64 @@ body {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
+	
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	 .burger-btn{
 		display:block;
 		margin-right:5%;
@@ -1383,12 +1750,12 @@ body {
 			display:none;
         }
 
-        .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
+       .clinic-info img {
+    max-width: 433px !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
+    display: block !important;
+}
 
         .clinic-info h1 {
             font-size: 24px;
@@ -1471,12 +1838,12 @@ body {
     }
 
             header img {
-                height: 57px;
+                height: 59px;
 				margin-left:0%;
-				margin-bottom:5%;
+				margin-bottom:4%;
             }
 
-            nav {
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -1484,14 +1851,15 @@ body {
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1;
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -1500,15 +1868,72 @@ body {
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events: auto;
+		
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	.burger-btn {
     display: block;
     margin-right: 5%;
@@ -1535,11 +1960,11 @@ body {
         }
 
         .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
+    max-width: 405px !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
+    display: block !important;
+}
 
         .clinic-info h1 {
             font-size: 24px;
@@ -1623,9 +2048,9 @@ body {
     }
 
             header img {
-                height: 46px;
+                height: 54px;
 				margin-left:0%;
-				margin-bottom:5%;
+				margin-bottom:2%;
             }
 
             nav {
@@ -1661,6 +2086,62 @@ body {
 	.btn-book-appointment{
 		display:none;
 	}
+	
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+	
 .burger-btn {
     display: block;
     margin-right: 5%;
@@ -1687,11 +2168,11 @@ body {
         }
 
         .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
+    max-width: 374px !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
+    display: block !important;
+}
 
         .clinic-info h1 {
             font-size: 24px;
