@@ -2618,6 +2618,7 @@ body {
 
 	<script>
         var header = document.getElementById("header");
+		var head = document.getElementById("head");
         var nav = document.querySelector("nav");
 
         // Get the offset position of the header
@@ -2632,8 +2633,10 @@ body {
         window.onscroll = function () {
             if (window.pageYOffset > sticky) {
                 header.classList.add("scrolled");
+				head.classList.add("scrolled");
             } else {
                 header.classList.remove("scrolled");
+				head.classList.remove("scrolled");
             }
         };
     </script>
