@@ -218,15 +218,16 @@
         }
 
         header img {
-            height: 54px; /* Adjust the height of your logo */
+            height: 123px; /* Adjust the height of your logo */
         }
 
-        nav {
+        .firstnav {
             display: flex;
             align-items: center;
+			opacity:0;
         }
 
-        nav a {
+        .firstnav a {
             color: #449A5C;
             margin: 0 15px;
             text-decoration: none;
@@ -235,14 +236,15 @@
             border-radius: 30px;
             transition: background-color 0.3s;
 			font-size:54%;
+			pointer-events:none;
 			
         }
 
-        nav a:hover {
+        .firstnav a:hover {
             background-color: #449A5C; /* Green color on hover */
             color: #fff;
         }
-		nav a.active {
+		.firstnav a.active {
             background-color: #449A5C;
             color: #fff;
         }
@@ -258,6 +260,58 @@
 			margin-right:2%;
 			font-size:54%;
         }
+		.head {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:101px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 		}
 	@media (max-width: 1024px) { 
 			body {
@@ -266,7 +320,7 @@
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-			header {
+				header {
             display: flex;
 			 flex-direction: row; 
             justify-content: space-between;
@@ -284,15 +338,15 @@
         }
 
         header img {
-            height: 35px; /* Adjust the height of your logo */
+            height: 62px; /* Adjust the height of your logo */
         }
 
-        nav {
+        .firstnav {
             display: flex;
             align-items: center;
         }
 
-        nav a {
+        .firstnav a {
             color: #449A5C;
             margin: 0 15px;
             text-decoration: none;
@@ -304,11 +358,11 @@
 			
         }
 
-        nav a:hover {
+        .firstnav a:hover {
             background-color: #449A5C; /* Green color on hover */
             color: #fff;
         }
-		nav a.active {
+		.firstnav a.active {
             background-color: #449A5C;
             color: #fff;
         }
@@ -323,6 +377,58 @@
 			display:block;
 			margin-right:2%;
 			font-size:54%;
+        }
+		.head {
+            display: flex;
+			 flex-direction: row; 
+            justify-content: Inherit;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 13px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:75%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
         }
 	}
 	@media (max-width: 769px) { 
@@ -401,21 +507,14 @@
         color: #333; /* Set a text color that complements the background */
 		width: 100%;
     }
-.custom-section {
-			margin-top:20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 50vh;
-			
-        }
-          header img {
-                height: 114px;
-				margin-left:0%;
-				margin-bottom:5%;
-            }
 
-            nav {
+           header img {
+    height: 118px;
+    margin-left: 0%;
+    margin-bottom: 3%;
+}
+
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -423,14 +522,15 @@
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -439,15 +539,70 @@
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events:auto;
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	.burger-btn {
     display: block;
     margin-right: 5%;
@@ -566,12 +721,12 @@
     }
 
             header img {
-                height: 70px;
+                height: 59px;
 				margin-left:0%;
 				margin-bottom:5%;
             }
 
-            nav {
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -579,14 +734,15 @@
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1;
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -595,15 +751,70 @@
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events:auto;
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	.burger-btn{
 		display:block;
 		margin-right:5%;
@@ -708,7 +919,7 @@
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-            header {
+             header {
          flex-direction: column; 
 		 align-items: flex-start;
         background-color: rgba(255, 255, 255, 1);
@@ -724,7 +935,7 @@
 				margin-bottom:5%;
             }
 
-            nav {
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -732,14 +943,15 @@
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1;
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -748,15 +960,70 @@
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events:auto;
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 		.burger-btn{
 		display:block;
 		margin-right:5%;
@@ -931,7 +1198,7 @@ body {
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-            header {
+           header {
          flex-direction: column; 
 		 align-items: flex-start;
         background-color: rgba(255, 255, 255, 1);
@@ -980,6 +1247,60 @@ body {
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 		.burger-btn{
 		display:block;
 		margin-right:5%;
@@ -1234,7 +1555,7 @@ body {
             font-family: Quicksand;
 			overflow-x:hidden;
         }
-            header {
+             header {
          flex-direction: column; 
 		 align-items: flex-start;
         background-color: rgba(255, 255, 255, 1);
@@ -1245,7 +1566,7 @@ body {
     }
 
             header img {
-                height: 61px;
+                height: 57px;
 				margin-left:0%;
 				margin-bottom:5%;
             }
@@ -1280,9 +1601,64 @@ body {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
+	
 	.btn-book-appointment{
 		display:none;
 	}
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	 .burger-btn{
 		display:block;
 		margin-right:5%;
@@ -1308,12 +1684,12 @@ body {
 			display:none;
         }
 
-        .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
+       .clinic-info img {
+    max-width: 433px !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
+    display: block !important;
+}
 
         .clinic-info h1 {
             font-size: 24px;
@@ -1396,12 +1772,12 @@ body {
     }
 
             header img {
-                height: 57px;
+                height: 59px;
 				margin-left:0%;
-				margin-bottom:5%;
+				margin-bottom:4%;
             }
 
-            nav {
+            .firstnav {
 				align-items: flex-start;
                 flex-direction: column;
                 text-align: center;
@@ -1409,14 +1785,15 @@ body {
                 padding: 0px;
                 position: relative;
                 display: none; /* Initially hide the navigation links */
+				opacity:1;
             }
 
-            nav.show {
+            .firstnav.show {
                 display: flex; /* Show the navigation links when the class is present */
 				width:100%;
             }
 
-            nav a {
+            .firstnav a {
         margin: 10px; /* Increase the margin for better spacing */
         padding: 8px 15px; /* Add padding for better clickability */
         border-radius: 5px; /* Reduce border radius for a cleaner look */
@@ -1425,15 +1802,72 @@ body {
         border: 1px solid #ccc; /* Add a subtle border for separation */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 		width:95%;
+		pointer-events: auto;
+		
     }
 
-    nav a:hover {
+    .firstnav a:hover {
         background-color: #eee; /* Change background color on hover */
         color: #333; /* Change text color on hover */
     }
 	.btn-book-appointment{
 		display:none;
 	}
+	
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
 	.burger-btn {
     display: block;
     margin-right: 5%;
@@ -1460,11 +1894,11 @@ body {
         }
 
         .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
+    max-width: 405px !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
+    display: block !important;
+}
 
         .clinic-info h1 {
             font-size: 24px;
@@ -1548,9 +1982,9 @@ body {
     }
 
             header img {
-                height: 46px;
+                height: 54px;
 				margin-left:0%;
-				margin-bottom:5%;
+				margin-bottom:2%;
             }
 
             nav {
@@ -1586,6 +2020,62 @@ body {
 	.btn-book-appointment{
 		display:none;
 	}
+	
+	.head {
+            display: none;
+			 flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0); /* Add some transparency to the background color */
+            
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+			margin-top:52px;
+			padding-top:1%;
+			padding-bottom:1%;
+        }
+
+        .head.scrolled {
+            background-color: rgba(255, 255, 255, 1); /* Change the background color on scroll */
+        }
+
+        .head img {
+            height: 63px; /* Adjust the height of your logo */
+			
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+			opacity:1
+			pointer-events: auto;
+			opacity:0
+			pointer-events: none;
+        }
+
+        nav a {
+            color: #449A5C;
+            margin: 0 15px;
+            text-decoration: none;
+            border: 2px solid #449A5C; /* Green border */
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+			font-size:100%;
+			
+        }
+
+        nav a:hover {
+            background-color: #449A5C; /* Green color on hover */
+            color: #fff;
+        }
+		nav a.active {
+            background-color: #449A5C;
+            color: #fff;
+        }
+	
 .burger-btn {
     display: block;
     margin-right: 5%;
@@ -1612,11 +2102,11 @@ body {
         }
 
         .clinic-info img {
-            max-width: 305px;
-            margin-right: 0px;
-			margin-top:20px;
-			display:none;
-        }
+    max-width: 374px !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
+    display: block !important;
+}
 
         .clinic-info h1 {
             font-size: 24px;
@@ -1738,7 +2228,7 @@ body {
         }
 
         .clinic-info img {
-            max-width: 305px;
+            max-width: 700px;
             margin-right: 0px;
 			margin-top:20px;
 			display:block;
