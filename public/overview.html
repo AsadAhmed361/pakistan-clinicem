@@ -1943,6 +1943,7 @@ body {
 
 	<script>
         var header = document.getElementById("header");
+		var head = document.getElementById("head");
         var nav = document.querySelector("nav");
 
         // Get the offset position of the header
@@ -1957,11 +1958,14 @@ body {
         window.onscroll = function () {
             if (window.pageYOffset > sticky) {
                 header.classList.add("scrolled");
+				head.classList.add("scrolled");
             } else {
                 header.classList.remove("scrolled");
+				head.classList.remove("scrolled");
             }
         };
     </script>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
